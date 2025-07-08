@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  title: Example User API
+  version: 1.0.0
+
+servers:
+  - url: https://jsonplaceholder.typicode.com
+
+paths:
+  /users/{id}:
+    get:
+      summary: Get user by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: A user object
+  /posts:
+    get:
+      summary: Get all posts
+      responses:
+        '200':
+          description: A list of posts
